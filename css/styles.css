@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,400&display=swap");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #0f171e;
+}
+
+h3 {
+  font-size: 19px;
+  display: inline-block;
+}
+
+a {
+  color: #01a3db;
+}
+
+a:hover {
+  color: #14b5eb;
+}
+
+.prime-logo {
+  height: 19px;
+  position: relative;
+  top: 2px;
+}
+
+.strive-nav-bg {
+  background-color: #0f171e;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.carousel {
+  margin-top: 77px;
+}
+
+nav .dropdown-toggle {
+  color: rgba(255, 255, 255, 0.65);
+}
+nav .dropdown-toggle:hover,
+nav .dropdown-toggle:focus {
+  color: white;
+}
+
+/* user account btn */
+.btn-ghost.dropdown-toggle span {
+  display: inline-block;
+  width: 80px;
+  position: relative;
+  top: 0.5rem;
+  text-overflow: ellipsis; /*truncates the text over 80px overflow with three ...*/
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.nav-link {
+  font-weight: 600;
+}
+
+.navbar-expand-lg .nav-item .nav-link {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0.05rem;
+  margin: 8px;
+}
+
+.navbar-expand-lg .nav-item.active .nav-link {
+  border-bottom: 1px solid white;
+}
+
+.little-element {
+  color: white;
+  background: red;
+  position: absolute;
+  bottom: 10px;
+  right: 16px;
+  height: 33px;
+  padding: 0.6rem;
+}
+
+footer {
+  text-align: center;
+}
+
+footer .footer-logo {
+  display: inline-block;
+  width: 120px;
+  height: 48px;
+  background-image: url("../logo/strivevideo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+footer ul:last-of-type {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 0px;
+  z-index: 99;
+  filter: none !important;
+  animation: fadeIn 1s cubic-bezier(0, 1, 0.21, 1) reverse forwards;
+}
+
+.logo {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) scale(3);
+  filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 0.311));
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0, 1, 0.21, 1);
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(120px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+.movie-card {
+  position: relative;
+  transition: all 0.4s linear;
+  z-index: 1;
+}
+
+.zero {
+  z-index: 0 !important;
+}
+
+.movie-card:hover.zero {
+  z-index: 1 !important;
+}
+
+.movie-card:hover {
+  transform: scale(1.2);
+  z-index: 1;
+  filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.208));
+}
+
+.movie-body {
+  position: absolute;
+  background-color: #0f171e;
+  color: white;
+  visibility: hidden;
+  transition: all 0.4s linear;
+  transform: translateY(-30%);
+  opacity: 0;
+}
+
+.movie-card:hover .movie-body {
+  visibility: visible;
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.movie-body p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.8em;
+  margin: 20px 15px;
+}
+
+.movie-card ion-icon {
+  opacity: 0;
+}
+
+.movie-card:hover ion-icon {
+  opacity: 1;
+}
+
+.movie-body::before {
+  content: " ";
+  position: absolute;
+  top: -20px;
+  left: 0px;
+  height: 20px;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(15, 23, 30, 1) 0%, rgba(0, 22, 255, 0) 100%);
+}
+
+.play-icon {
+  font-size: 1.8em;
+  transition: all 0.3s linear;
+  right: 0.3em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.play-icon:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.watch-tag {
+  color: #79b8f3;
+}
+
+.movie-body {
+}
+
+.my-alert {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 3;
+  padding: 0px;
+}
+
+.my-alert::before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7.5px 15px 7.5px 0;
+  border-color: transparent #cce5ff transparent transparent;
+}
+
+.animate-bg {
+  padding: 15px;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 255, 186, 1) 0%,
+    rgba(255, 255, 255, 1) 18%,
+    rgba(0, 225, 209, 1) 34%,
+    rgba(255, 255, 255, 1) 47%,
+    rgba(0, 205, 224, 1) 56%,
+    rgba(0, 198, 230, 1) 64%,
+    rgba(255, 255, 255, 1) 86%,
+    rgba(0, 166, 255, 1) 100%
+  );
+  background-position: 100% 50%;
+  background-size: 200% 200%;
+  animation: myanimationname 3s linear infinite;
+}
+
+@keyframes myanimationname {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.slide-in-left {
+  -webkit-animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-4-1 12:24:14
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.scale-out-hor-left {
+  -webkit-animation: scale-out-hor-left 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-hor-left 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-4-1 12:25:44
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation scale-out-hor-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-out-hor-left {
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    opacity: 1;
+  }
+}
+@keyframes scale-out-hor-left {
+  0% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    opacity: 1;
+  }
+}
